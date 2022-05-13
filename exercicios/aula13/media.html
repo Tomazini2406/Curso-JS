@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body{ font: 12pt Arial;}
+        h1,h2,h3{ font-family: 'Pacifico', cursive; font-weight: normal;}
+        button{font: normal 15pt Arial;
+        margin-bottom:30px;
+        padding:30px;}
+    </style>
+</head>
+<body>
+    <h1>Média do aluno v2.0</h1>
+    <button id="calc" onclick="clicar()">Calcular média</button>
+    <div id="res">O resultado vai aparecer aqui...</div>
+    <script>
+        function clicar(){
+            var nome = window.prompt('Qual é o nome do aluno?')
+            var n1 = Number(window.prompt('Qual é a primeira nota do aluno?'))
+            var n2 = Number(window.prompt('Qual foi a segunda nota do aluno?'))
+            var res = document.getElementById('res')
+            var media = (n1+n2)/2
+            res.innerHTML= `<p>Calculando a média final de <mark>${nome}</mark></p>`
+            res.innerHTML+=`<p>As notas obtidas foram <mark>${n1}</mark> e <mark>${n2}</mark>.</p>`
+            res.innerHTML+= `<p>A média final será <mark>${media}</mark>.</p>`
+            if (media < 6){
+                res.innerHTML+='<p>A mensagem que temos é: <strong style="color:red;">Você precisa estudar mais!</strong></p>'
+            } else if (media <=10){
+                res.innerHTML+='<p>A mensagem que temos é: <strong style="color:red;">Meus Parabéns!</strong></p>'}
+            else {
+                res.innerHTML+= null}
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h1>CheckIn</h1>
+    Sua nacionalidade:<input type = 'string' name = 'txtnac' id = 'txtnac'>
+    <input type = 'button' value = 'Verificar' onclick = 'país()'>
+    <div id = 'res'>
+    
+    </div>
+
+    <script>
+        function país() {
+            var nac = window.document.querySelector('input#txtnac')
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Você é ${nac}!</p>`
+            if (nac != 'Brasileiro'){
+                res.innerText += `<p>Você é estrangeiro, pois é <strong>${nac}</strong></p>`
+            } else {
+                res.innerText += '<p>PARADO! VOCÊ É BANDIDO</p>'
+            }
+        }
+    </script>
+    
+</body>
+</html>

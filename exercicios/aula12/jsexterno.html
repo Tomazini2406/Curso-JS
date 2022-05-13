@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript externo</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+        }
+        button{font: normal 18pt Arial;}
+    </style>
+</head>
+<body>
+    <h1>Javascript externo</h1>
+    <button id="one" onclick="clique1()">Ação 1</button>
+    <button id="two" onclick="clique2()">Ação 2</button>
+    <button id="three" onclick="clique3()">Ação 3</button>
+    <button id="four" onclick="clique4()">Ação 4</button>
+    <div id="res">
+        <p>Aqui vou registrar suas ações com os botões acima</p>
+    </div>
+    <script>
+        var res = document.getElementById('res')
+        function clique1(){
+            res.innerHTML+='<p>Clicou no primeiro botão</p>'
+        }
+        function clique2(){
+            res.innerHTML+='<p>Clicou no segundo botão</p>'
+        }
+        function clique3(){
+            res.innerHTML+='<p>Clicou no terceiro botão</p>'
+        }
+        function clique4(){
+            res.innerHTML+='<p>Clicou no quarto botão</p>'
+        }
+    </script>
+</body>
+</html>

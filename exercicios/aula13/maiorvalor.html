@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Valor</title>
+    <style>
+        h1,h2,h3{font-family: "Pacifico", cursive; font-weight: normal;}
+        button{padding: 30px;
+        font: normal 15pt Arial;
+        margin-bottom: 10px;}
+        body{font: normal 20pt Arial;}
+    </style>
+</head>
+<body>
+    <h1>Maior Valor</h1>
+    <button id="bot" onclick="clicar()">Clique para começar</button>
+    <div id="res">O resultado vai aparecer aqui...</div>
+    <script>
+        function clicar(){
+            var n1 = Number(window.prompt('Digite um número:'))
+            var n2 = Number(window.prompt('Digite outro número:'))
+            var res = document.getElementById('res')
+            if (n1>n2){
+                res.innerHTML=`<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, o maior valor é <strong>${n1}</strong></p>`
+            } else if (n2>n1){
+                res.innerHTML=`<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, o maior valor é <strong>${n2}</strong></p>`
+            } else{
+                res.innerHTML=`<p>Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, ambos são <strong>iguais</strong>.</p>`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões</title>
+</head>
+<body>
+    <h1>Desafio dos das mensagens</h1>
+    <input type="button" value="Botão 1" id="bot1" onclick="clicar()">
+    <input type="button" value="Botão 2" id="bot2" onclick="b2()">
+    <input type="button" value="Botão 3" id="bot3" onclick="b3()">
+    <script>
+        function clicar(){
+            var b1=document.getElementById("bot1")
+            window.alert('Botão 1 apertado')
+        }
+        function b2(){
+            var bot2 = document.getElementById("bot2")
+            window.alert('Botão 2 apertado')
+        }
+        function b3(){
+            var bot3 = document.getElementById('bot3')
+            window.alert('Botão 3 apertado')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo com o sistema</title>
+    <style>
+        h1{font: normal 20pt Arial;}
+        button{ font: normal 15pt Arial;
+        padding: 30px;
+        margin-bottom: 30px;}
+        body{font: normal 20pt Arial;}
+    </style>
+</head>
+<body>
+    <h1>Interagindo com o sistema</h1>
+    <button id="res" onclick="saida()">Clique em mim</button>
+    <div id="saida">Aqui vai aparecer algo...</div>
+    <script>
+        function saida(){
+            var agora = new Date
+            var res = document.getElementById('saida')
+            res.innerHTML=`O que eu recebi do sistema foi <mark>${agora}</mark>`
+        }
+    </script>
+</body>
+</html>

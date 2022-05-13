@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{background: linear-gradient(to right, black,blue,rgb(172, 19, 19));
+        color:white;
+        font: normal 20pt Arial;
+        text-align: center;    
+    }
+    input{font:normal 20pt Arial;}
+    button{font: normal 20pt Arial;}
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <p>Digite seu país:</p>
+    <input type="text" id="nac">
+    <button id="enter" onclick="clicar()">Entrar</button>
+    <script>
+    function clicar(){
+        var n= document.getElementById('nac')
+        if (n.value=='Brasil'){
+            window.alert(`Você é brasileiro, pois mora no ${n.value}`)
+        }
+        else if (n.value!='Brasil'){
+            window.alert(`Você é gringo, pois mora em: ${n.value}`)
+        }
+    }
+    </script>
+</body>
+</html>
